@@ -72,3 +72,43 @@ in each of the tuples at the same position.___
 >___At the entrance to the program, information is provided about passengers who wish to leave their luggage in the storage room at a predetermined time before midnight. In the first line, the number of passengers N is reported, which is not less than 3, but does not exceed 1000; in the second line - the number of cells in the storage chamber K, which is not less than 10, but not more than 1000.___
 ____
 ## ___Modul 5. Functions___
+### ___Homework1___
+>___Task1: Given an integer n, calculate n + nn + nnn.___
+
+>___Task2: Write a function that takes two numbers as parameters
+and displays all even numbers in between.___
+### ___Homework2___
+>___Suppose that we have a list of customers and we for
+of a given client, its position in the list should be displayed
+and count how many times it occurs in the list,
+that is, for frequent customers (those who appear on the list
+more than once) some discount applies.
+Let's create a function that displays the positions of elements
+(customers) in the list and counts (returns) the number
+occurrences
+In the main code, we use the result of the work
+of this function to determine the situation whether there will be a discount for
+this client.___
+### ___Homework3___
+>___Task1: The function of determining the number of vowels in a line.
+At the entrance we have a line with a letter of the Latin alphabet.___
+
+>___Task2: Write a function that outputs to the screen
+formatted text below:___
+```
+“Don’t let the noise of others’ opinions
+drown out your own inner voice.”
+                    Steve Jobs
+```
+
+>___Task3: Write a function that checks if a hexadecimal number exists
+the "lucky" number. A number is passed as a parameter.
+If the number is lucky, return true from the if function
+no - false.
+A "lucky six-digit number" is a number in which
+the sum of the first three digits is equal to the sum of the second three
+numbers For example, 123420 is lucky 1+2+3 = 4+2+0, and
+723422 is an unfortunate 7+2+3 != 4+2+2.___
+## ___Modul 6. Functions, modules___
+### ___Homework1___
+
