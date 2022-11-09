@@ -1,81 +1,81 @@
 import random
-import time
+from easygui import *
 
-print("++++++++++++++++++++++++++++++++++++++")
-print("==============BLACK JACK==============")
-print("++++++++++++++++++++++++++++++++++++++\n")
-
+msgbox("WELKOME TO BLACK JACK GAME","==BLACK JACK==","Lets play BlackJack")
 
 def game():
     cards = [6, 7, 8, 9, 10, 2, 3, 4, 11] * 4
     random.shuffle(cards)
-
-    print("Lets play BlackJack\n")
     count = 0
     count_bot = 0
-
     while True:
-        chois = input("Please,take a card? y/n\n")
-        if chois == 'y':
+        chois = buttonbox("Please,take a card?",'==BLACK JACK==',['Yes','No'])
+        if chois == 'Yes':
             current = cards.pop()  # pop видаляє карту
             current_bot = cards.pop()
             count += current  # додали значення
             count_bot += current_bot
-            print("You take: ", current)
-            print("Bot take: ", current_bot, "\n")
-            print("Player score: ", count)
-            print("Bot score: ", count_bot, "\n")
+            msgbox(f'You take:{current}\nBot take:{current_bot}\n***********\nPlayer score:{count}\nBot    score:{count_bot}','==Black Jack==')
             if count > 21:    # working
                 if count_bot < 21:
-                    print("Bot is win. Bot has:", count_bot, "\n","You are looser. You have", count,"\n")
+                    msgbox(f"**Bot is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count > 21:
+            if count > 21:    # working
                 if count_bot > 21:
-                    print("Player is looser" "\n", "Plauyer:", count,"\n","Bot is looser\n", "BOT:", count_bot,"\n")
+                    msgbox(f"**Player and Bot are loose**\nPlauyer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count == 21:
+            if count == 21:   # working
                 if count_bot > 21:
-                    print("You are win. You have", count, "\n", "Bot is looser. He has", count_bot,"\n")
+                    msgbox(f"**Player is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count > 21:
+            if count > 21: # working
                 if count_bot == 21:
-                    print("You are looser. You have", count, "\n", "Bot is win. He has", count_bot,"\n")
+                    msgbox(f"**Bot is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count < 21:            # working
+            if count < 21:            # working
                 if count_bot > 21:
-                    print("You are win. You have", count, "\n", "Bot is looser. He has", count_bot,"\n")
+                    msgbox(f"**Player is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count == 21:
+            if count < 21:
+                if count_bot == 21:
+                    msgbox(f"**Bot is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
+                    break
+
+            if count == 21:           # working
                 if count_bot < 21:
-                    print("You are win. You have", count, "\n", "Bot is looser. He has", count_bot,"\n")
+                    msgbox(f"**Player is win**\nPlayer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-            elif count == 21:         # did not working
+            if count == 21:         # did not working
                 if count_bot == 21:
-                    print("DRAWW\n", "BOT:", count_bot, "\n", "Plauyer:", count,"\n")
+                    msgbox(f"**DRAWW**\nPlauyer:{count}\nBot:{count_bot}",'==Black Jack==')
                     break
 
-
-
-        elif chois == 'n':
-            print ("Plauer score: ", count,"\n", "Bot score: ", count_bot,"\n")
-            break
+        if chois == 'No':
+            if count > count_bot:
+                msgbox(f'**Player is win**\nPlauyer:{count}\nBot:{count_bot}','==Black Jack==')
+                break
+            if count < count_bot:
+                msgbox(f"**Bot is win**\nPlauyer:{count}\nBot:{count_bot}",'==Black Jack==')
+                break
+            if count == count_bot:
+                msgbox(f'**DRAW**\nPlauyer:{count}\nBot:{count_bot}','==Black Jack==')
+                break
 
 if __name__ == '__main__':
     a = 1
     while a == 1:
         game()
-        exit = input("Do you want to play again? [YES] [NO]: ")
+        exit = buttonbox("Do you want to play again?","==Black Jack==", ['YES','NO'])
         if exit != "YES":
             a = 2
     else:
-        print('GOOD BUY')
-        time.sleep(5)
+        msgbox(f'GOOD BUY','==Black Jack==')
 
 
 
