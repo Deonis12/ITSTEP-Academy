@@ -57,3 +57,18 @@ indices___
 >___Create a list with elements of different types and name it mlist. By
 with the help of the for loop, we will find out the data type for each element of the list and
 output to the console.___
+____
+## ___Modul 4. Sorting, searching___
+### ___Homework1___
+>___Task1: There are three tuples of integers to be found
+elements that are in all tuples.___
+
+>___Task2: There are three tuples of integers to be found
+elements that are unique to each list.___
+
+>___Task3: There are three tuples of integers, it is necessary to find the elements that are in each of the tuples and are found
+in each of the tuples at the same position.___
+### ___Homework2___
+>___At the entrance to the program, information is provided about passengers who wish to leave their luggage in the storage room at a predetermined time before midnight. In the first line, the number of passengers N is reported, which is not less than 3, but does not exceed 1000; in the second line - the number of cells in the storage chamber K, which is not less than 10, but not more than 1000.___
+____
+## ___Modul 5. Functions___
